@@ -1,7 +1,7 @@
 {
   "name": "qdev",
-  "version": "0.0.1",
-  "description": "speeding up dev setup",
+  "version": "1.0.0",
+  "description": "a cli tool to help speed up dev setup",
   "main": "index.js",
   "bin": {
     "q": "./index.js"
