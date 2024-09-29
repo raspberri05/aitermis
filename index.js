@@ -41,7 +41,7 @@ switch (cmd) {
       rl.question("Repository name\n", (name) => {
         const cloneProcess = spawn("git", [
           "clone",
-          "https://github.com/raspberri05/persona.fm.git",
+          `https://github.com/${user}/${name}.git`,
           "--progress",
         ]);
 
