@@ -1,2 +1,3 @@
 # quickdev
-speeding up development
+
+a cli tool to help speed up dev setup
