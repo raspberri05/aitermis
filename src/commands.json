@@ -1,0 +1,12 @@
+{
+  "commands": [
+    {
+      "name": "help",
+      "description": "display help information"
+    },
+    {
+      "name": "clone",
+      "description": "clone a repository from github"
+    }
+  ]
+}

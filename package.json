@@ -2,12 +2,13 @@
   "name": "qdev",
   "version": "1.0.0",
   "description": "a cli tool to help speed up dev setup",
-  "main": "index.js",
+  "main": "dist/index.js",
   "bin": {
-    "q": "./index.js"
+    "q": "./dist/index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon",
+    "lint": "eslint . && prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,15 @@
   "bugs": {
     "url": "https://github.com/raspberri05/quickdev/issues"
   },
-  "homepage": "https://github.com/raspberri05/quickdev#readme"
+  "homepage": "https://github.com/raspberri05/quickdev#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.11.1",
+    "@types/node": "^22.7.4",
+    "eslint": "^9.11.1",
+    "globals": "^15.9.0",
+    "nodemon": "^3.1.7",
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.2",
+    "typescript-eslint": "^8.8.0"
+  }
 }
