@@ -1,14 +1,22 @@
 #!/bin/bash
 
+set -e
+
+npm run lint
+
 npx tsc
 
 rm -rf dist
 mkdir dist
+mkdir dist/commands
+mkdir dist/helpers
+mkdir dist/data
 
-mv src/*.js dist/
+mv src/index.js dist/
+mv src/commands/*.js dist/commands/
+mv src/helpers/*.js dist/helpers/
 
-cp src/commands.json dist/
-cp src/readme.json dist/
+cp -r src/data dist/
 
 npm uninstall -g qdev
 npm install -g .
