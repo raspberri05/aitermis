@@ -2,6 +2,8 @@
 
 set -e
 
+find src -name "*.js" -delete
+
 npm run lint
 
 npx tsc
@@ -20,5 +22,7 @@ cp -r src/data dist/
 
 npm uninstall -g qdev
 npm install -g .
+
+find src -name "*.js" -delete
 
 echo "Build completed successfully."

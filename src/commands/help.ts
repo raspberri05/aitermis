@@ -3,12 +3,12 @@ import fs from "fs";
 import path from "path";
 
 export function help() {
-  const cmdsFilePath = path.join(__dirname, "../data/commands.json");
-  const cmds = JSON.parse(fs.readFileSync(cmdsFilePath, "utf8"));
+    const cmdsFilePath = path.join(__dirname, "../data/commands.json");
+    const cmds = JSON.parse(fs.readFileSync(cmdsFilePath, "utf8"));
 
-  println("usage: q -[command]");
-  print("commands:");
-  cmds.commands.forEach((command: any) => {
-    print(`  ${command.name} - ${command.description}`);
-  });
+    println("usage: q -[command]");
+    print("commands:");
+    cmds.commands.forEach((command: any) => {
+        print(`  ${command.name} - ${command.description}`);
+    });
 }

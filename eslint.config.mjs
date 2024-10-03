@@ -3,21 +3,21 @@ import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
 
 export default [
-  { files: ["**/*.{mjs,cjs,ts}"] },
-  { languageOptions: { globals: globals.browser } },
-  pluginJs.configs.recommended,
-  ...tseslint.configs.recommended,
-  {
-    ignores: ["dist/"],
-  },
-  {
-    rules: {
-      "@typescript-eslint/no-explicit-any": "off",
+    { files: ["**/*.{mjs,cjs,ts}"] },
+    { languageOptions: { globals: globals.browser } },
+    pluginJs.configs.recommended,
+    ...tseslint.configs.recommended,
+    {
+        ignores: ["dist/"],
     },
-    languageOptions: {
-      parserOptions: {
-        warnOnUnsupportedTypeScriptVersion: false,
-      },
+    {
+        rules: {
+            "@typescript-eslint/no-explicit-any": "off",
+        },
+        languageOptions: {
+            parserOptions: {
+                warnOnUnsupportedTypeScriptVersion: false,
+            },
+        },
     },
-  },
 ];
