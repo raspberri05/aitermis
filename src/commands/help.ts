@@ -11,8 +11,9 @@ export function help() {
     cmds.commands.forEach((command: any) => {
         print(`  ${command.name} - ${command.description}`);
         if (command.option) {
+            print(`    parameters:`);
             println(
-                `          ${command.option.required ? "required" : "optional"}: ${command.option.name} - ${command.option.description}`,
+                `      ${command.option.name} - ${command.option.description} (${command.option.required ? "required" : "optional"})`,
             );
         }
     });

@@ -15,7 +15,8 @@ function help() {
     cmds.commands.forEach((command) => {
         (0, console_1.print)(`  ${command.name} - ${command.description}`);
         if (command.option) {
-            (0, console_1.println)(`          ${command.option.required ? "required" : "optional"}: ${command.option.name} - ${command.option.description}`);
+            (0, console_1.print)(`    parameters:`);
+            (0, console_1.println)(`      ${command.option.name} - ${command.option.description} (${command.option.required ? "required" : "optional"})`);
         }
     });
 }
