@@ -6,7 +6,12 @@
         },
         {
             "name": "clone",
-            "description": "clone a repository from github"
+            "description": "clone a repository from github",
+            "option": {
+                "name": "uri",
+                "description": "the uri of the repository to clone",
+                "required": false
+            }
         }
     ]
 }

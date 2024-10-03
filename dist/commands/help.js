@@ -10,9 +10,12 @@ const path_1 = __importDefault(require("path"));
 function help() {
     const cmdsFilePath = path_1.default.join(__dirname, "../data/commands.json");
     const cmds = JSON.parse(fs_1.default.readFileSync(cmdsFilePath, "utf8"));
-    (0, console_1.println)("usage: q -[command]");
+    (0, console_1.println)("usage: q [command] [option]");
     (0, console_1.print)("commands:");
     cmds.commands.forEach((command) => {
         (0, console_1.print)(`  ${command.name} - ${command.description}`);
+        if (command.option) {
+            (0, console_1.println)(`          ${command.option.required ? "required" : "optional"}: ${command.option.name} - ${command.option.description}`);
+        }
     });
 }
