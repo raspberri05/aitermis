@@ -16,7 +16,10 @@ function help() {
         (0, console_1.print)(`  ${command.name} - ${command.description}`);
         if (command.option) {
             (0, console_1.print)(`    parameters:`);
-            (0, console_1.println)(`      ${command.option.name} - ${command.option.description} (${command.option.required ? "required" : "optional"})`);
+            (0, console_1.print)(`      ${command.option.name} - ${command.option.description} (${command.option.required ? "required" : "optional"})`);
+            if (command.option.allowedValues) {
+                (0, console_1.print)(`        allowed values: ${command.option.allowedValues.join(", ")}`);
+            }
         }
     });
 }

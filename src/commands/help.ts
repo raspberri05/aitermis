@@ -12,9 +12,14 @@ export function help() {
         print(`  ${command.name} - ${command.description}`);
         if (command.option) {
             print(`    parameters:`);
-            println(
+            print(
                 `      ${command.option.name} - ${command.option.description} (${command.option.required ? "required" : "optional"})`,
             );
+            if (command.option.allowedValues) {
+                print(
+                    `        allowed values: ${command.option.allowedValues.join(", ")}`,
+                );
+            }
         }
     });
 }

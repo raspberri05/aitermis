@@ -5,6 +5,7 @@ import { command } from "./helpers/cmdparse";
 import { clone } from "./commands/clone";
 import { undef } from "./commands/undefined";
 import { help } from "./commands/help";
+import { env } from "./commands/env";
 
 const cmd = command();
 
@@ -27,6 +28,11 @@ switch (cmd) {
         clone(handleExit);
         break;
 
+    case "env":
+        env();
+        handleExit(0);
+        break;
+        
     default:
         exits("Invalid command provided.", 1);
         break;

@@ -12,6 +12,16 @@
                 "description": "the uri of the repository to clone",
                 "required": false
             }
+        },
+        {
+            "name": "env",
+            "description": "manage env var files",
+            "option": {
+                "name": "action",
+                "description": "the action to perform with env var files",
+                "required": true,
+                "allowedValues": ["create"]
+            }
         }
     ]
 }
