@@ -33,4 +33,4 @@ quickdev
 
 ### Using the CLI
 
-`q [command]`
+[[put list of commands here]]
