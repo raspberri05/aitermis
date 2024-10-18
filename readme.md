@@ -4,7 +4,7 @@ a cli tool to help speed up dev setup
 
 ## About
 
-quickdev provides a couple of cli commands that are helpful when setting up the dev environment for a new project. 
+quickdev provides a couple of cli commands that are helpful when setting up the dev environment for a new project.
 It does not have any production dependencies, therefore it does not depend on third parties for any functionality
 
 ## Getting Started with Local Development

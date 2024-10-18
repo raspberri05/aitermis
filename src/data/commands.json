@@ -5,23 +5,26 @@
             "description": "display help information"
         },
         {
-            "name": "clone",
-            "description": "clone a repository from github",
-            "option": {
-                "name": "uri",
-                "description": "the uri of the repository to clone",
-                "required": false
-            }
+            "name": "config",
+            "description": "configure q",
+            "usage": "q config <option> <value>",
+            "options": [
+                {
+                    "name": "username",
+                    "description": "set your github username"
+                }
+            ]
         },
         {
-            "name": "env",
-            "description": "manage env var files",
-            "option": {
-                "name": "action",
-                "description": "the action to perform with env var files",
-                "required": true,
-                "allowedValues": ["create"]
-            }
+            "name": "clone",
+            "description": "clone a repository from github",
+            "usage": "q clone <option>",
+            "options": [
+                {
+                    "name": "url",
+                    "description": "clones a repository from a full git repository url"
+                }
+            ]
         }
     ]
 }

@@ -6,7 +6,7 @@ const cmdparse_1 = require("./helpers/cmdparse");
 const clone_1 = require("./commands/clone");
 const undefined_1 = require("./commands/undefined");
 const help_1 = require("./commands/help");
-const env_1 = require("./commands/env");
+const config_1 = require("./commands/config");
 const cmd = (0, cmdparse_1.command)();
 function handleExit(code) {
     process.exit(code);
@@ -23,8 +23,8 @@ switch (cmd) {
     case "clone":
         (0, clone_1.clone)(handleExit);
         break;
-    case "env":
-        (0, env_1.env)();
+    case "config":
+        (0, config_1.config)();
         handleExit(0);
         break;
     default:
