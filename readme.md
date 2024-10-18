@@ -1,4 +1,4 @@
-# quickdev
+# qdev
 
 a cli tool to help speed up dev setup
 
