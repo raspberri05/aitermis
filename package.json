@@ -9,7 +9,8 @@
     "scripts": {
         "dev": "nodemon",
         "lint": "eslint .",
-        "style": "prettier --write ."
+        "style": "prettier --write .",
+        "docs": "node docs.mjs"
     },
     "repository": {
         "type": "git",

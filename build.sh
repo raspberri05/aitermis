@@ -13,13 +13,12 @@ npx tsc
 mkdir -p ./dist/
 mkdir -p ./dist/commands/
 mkdir -p ./dist/helpers/
-mkdir -p ./dist/data/
 
 mv ./src/index.js ./dist/
 mv ./src/commands/*.js dist/commands/
 mv ./src/helpers/*.js dist/helpers/
 
-cp -r ./src/data/ dist/
+cp -r ./src/data.json ./dist/
 
 npm uninstall -g qdev
 npm install -g .

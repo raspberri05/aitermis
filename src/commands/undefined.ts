@@ -1,10 +1,10 @@
-import { println, print } from "../helpers/console";
+import { println } from "../helpers/console";
 import fs from "fs";
 import path from "path";
 
 export function undef() {
-    const titleFilPath = path.join(__dirname, "../data/readme.json");
+    const titleFilPath = path.join(__dirname, "../data.json");
     const title = JSON.parse(fs.readFileSync(titleFilPath, "utf8"));
-    println(title.title);
-    print(title.subtitle);
+    println(title.title, "green");
+    println(title.subtitle, "blue");
 }

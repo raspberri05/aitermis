@@ -19,15 +19,15 @@ It does not have any production dependencies, therefore it does not depend on th
 
 ```
 quickdev
-├── dist (typescript files are compiled to this folder to publish to npm's registry)
+├── dist/ (typescript files are compiled to this folder to publish to npm's registry)
 │   ├── ...
-├── node_modules
+├── node_modules/
 │   ├── ...
 └── src
     ├── index.ts (entry point for the cli)
-    ├── commands (each cli command has a separate file)
-    ├── data (json data used in commands)
-    └── helpers (helper functions for reused code)
+    ├── commands/ (each cli command has a separate file)
+    ├── data.json (json data used in commands)
+    └── helpers/ (helper functions for reused code)
 ```
 
 ## Usage
@@ -36,6 +36,30 @@ quickdev
 
 `npm i -g qdev`
 
-### Using the CLI
+### Available Commands
 
-[[put list of commands here]]
+#### **help**
+
+display help information
+
+#### **config**
+
+configure q
+
+_Usage:_ `q config <option> <value>`
+
+_Options:_
+
+-   username: set your github username
+    -   Example: `q config username octocat`
+
+#### **clone**
+
+clone a repository from github
+
+_Usage:_ `q clone <option>`
+
+_Options:_
+
+-   url: clones a repository from a full git repository url
+    -   Example: `q clone https://github.com/username/repository.git`

@@ -5,7 +5,7 @@ import { option } from "../helpers/optparse";
 
 const opt = option();
 
-const cmdsFilePath = path.join(__dirname, "../data/commands.json");
+const cmdsFilePath = path.join(__dirname, "../data.json");
 const cmds = JSON.parse(fs.readFileSync(cmdsFilePath, "utf8"));
 
 export function help() {

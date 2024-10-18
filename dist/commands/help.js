@@ -9,7 +9,7 @@ const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));
 const optparse_1 = require("../helpers/optparse");
 const opt = (0, optparse_1.option)();
-const cmdsFilePath = path_1.default.join(__dirname, "../data/commands.json");
+const cmdsFilePath = path_1.default.join(__dirname, "../data.json");
 const cmds = JSON.parse(fs_1.default.readFileSync(cmdsFilePath, "utf8"));
 function help() {
     if (opt === undefined) {
