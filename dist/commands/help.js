@@ -13,22 +13,30 @@ const cmdsFilePath = path_1.default.join(__dirname, "../data/commands.json");
 const cmds = JSON.parse(fs_1.default.readFileSync(cmdsFilePath, "utf8"));
 function help() {
     if (opt === undefined) {
-        (0, console_1.println)("qdev v1.1.0");
+        (0, console_1.println)("qdev v1.1.0", "yellow");
+        (0, console_1.println)("");
         cmds.commands.forEach((command) => {
-            (0, console_1.print)(`${command.name} - ${command.description}`);
+            (0, console_1.print)(command.name, "blue");
+            (0, console_1.print)(" - ");
+            (0, console_1.println)(command.description);
         });
     }
     else {
         const command = cmds.commands.find((cmd) => cmd.name === opt);
         if (command) {
             if (command.options) {
-                (0, console_1.print)(command.description);
-                (0, console_1.print)("");
-                (0, console_1.print)(`usage: ${command.usage}`);
-                (0, console_1.print)("");
-                (0, console_1.print)("options:");
+                (0, console_1.println)(command.description, "green");
+                (0, console_1.println)("");
+                (0, console_1.println)("usage: ", "yellow");
+                (0, console_1.println)(`${command.usage}`);
+                (0, console_1.println)("");
+                (0, console_1.println)("options: ", "yellow");
                 command.options.forEach((option) => {
-                    (0, console_1.print)(`     ${option.name} - ${option.description}`);
+                    (0, console_1.println)(option.name, "blue");
+                    (0, console_1.print)("  description: ");
+                    (0, console_1.println)(option.description);
+                    (0, console_1.print)("  example:     ");
+                    (0, console_1.println)(option.example);
                 });
             }
         }

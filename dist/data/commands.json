@@ -11,7 +11,8 @@
             "options": [
                 {
                     "name": "username",
-                    "description": "set your github username"
+                    "description": "set your github username",
+                    "example": "q config username octocat"
                 }
             ]
         },
@@ -22,7 +23,8 @@
             "options": [
                 {
                     "name": "url",
-                    "description": "clones a repository from a full git repository url"
+                    "description": "clones a repository from a full git repository url",
+                    "example": "q clone https://github.com/username/repository.git"
                 }
             ]
         }
