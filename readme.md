@@ -4,8 +4,8 @@ a cli tool to help speed up dev setup
 
 ## About
 
-quickdev provides a couple of cli commands that are helpful when setting up the dev environment for a new project.
-It does not have any production dependencies, therefore it does not depend on third parties for any functionality
+qdev provides a multitude cli commands that are helpful in quickly setting up local development environments
+It does not have any production dependencies, therefore it does not depend on other third-party dependencies for core functionality.
 
 ## Getting Started with Local Development
 
