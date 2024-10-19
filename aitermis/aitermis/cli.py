@@ -3,6 +3,7 @@ import requests
 
 from .url import make_url
 
+
 def main():
     url = make_url()
     parser = argparse.ArgumentParser(

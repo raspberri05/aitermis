@@ -1,49 +1,47 @@
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
+import clsx from "clsx";
+import Heading from "@theme/Heading";
+import styles from "./styles.module.css";
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  Svg: React.ComponentType<React.ComponentProps<"svg">>;
   description: JSX.Element;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: "Easy to Use",
     // eslint-disable-next-line @typescript-eslint/no-require-imports
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
     description: (
       <>
-        aitermis was designed from the ground up to be easily installed and used to make development workflows more efficient
+        aitermis was designed from the ground up to be easily installed and used
+        to make development workflows more efficient
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: "Focus on What Matters",
     // eslint-disable-next-line @typescript-eslint/no-require-imports
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
     description: (
       <>
-        aitermis has simple configuration and can process natural language to perform the appropriate actions
+        aitermis has simple configuration and can process natural language to
+        perform the appropriate actions
       </>
     ),
   },
   {
-    title: 'Powered by Python',
+    title: "Powered by Python",
     // eslint-disable-next-line @typescript-eslint/no-require-imports
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        python is fast and makes aitermis fast
-      </>
-    ),
+    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+    description: <>python is fast and makes aitermis fast</>,
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, Svg, description }: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx("col col--4")}>
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
