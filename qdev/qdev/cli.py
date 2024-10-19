@@ -1,8 +1,10 @@
 import argparse
 import requests
 
+import os
 
 def main():
+    url = os.getenv("URL")
     parser = argparse.ArgumentParser(
         description="An AI-powered to help speed up development"
     )
@@ -14,7 +16,7 @@ def main():
 
     print(f"your query: {result}")
 
-    response = requests.get(f"https://server.qdev.nayasinghania.com?query={result}")
+    response = requests.get(f"{url}/?query={result}")
 
     if response.status_code == 200:
         result = response.json()
