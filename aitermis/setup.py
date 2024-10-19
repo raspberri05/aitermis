@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="aitermis",
-    version="1.0.0",
+    version="1.0.1",
     packages=find_packages(),
     include_package_data=True,
     description="An AI powered cli to make setting up a development environment fast and efficient.",
