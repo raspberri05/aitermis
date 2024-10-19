@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: qdev
+Version: 0.1.0
+Summary: An AI powered cli to make setting up a development environment fast and efficient.
+Home-page: https://github.com/raspberri05/qdev
+Author: Your Name
+Author-email: naya.singhania@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+
+# qdev
+
+check out our official documentation at https://qdev.nayasinghania.com
+

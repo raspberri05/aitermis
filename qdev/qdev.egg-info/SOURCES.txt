@@ -1,0 +1,9 @@
+README.md
+setup.py
+qdev/__init__.py
+qdev/cli.py
+qdev.egg-info/PKG-INFO
+qdev.egg-info/SOURCES.txt
+qdev.egg-info/dependency_links.txt
+qdev.egg-info/entry_points.txt
+qdev.egg-info/top_level.txt
