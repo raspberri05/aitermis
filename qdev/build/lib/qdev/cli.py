@@ -1,9 +1,10 @@
 import argparse
 import requests
 
+
 def main():
     parser = argparse.ArgumentParser(
-        description="Simple CLI for basic math operations."
+        description="An AI-powered to help speed up development"
     )
     parser.add_argument("query", type=str, help="your query to the ai")
 
@@ -15,12 +16,13 @@ def main():
 
     response = requests.get(f"http://127.0.0.1:8000/?query={result}")
 
-    # Check if the request was successful
     if response.status_code == 200:
-        result = response.json()  # Assuming the server returns JSON
+        result = response.json()
         print(f"command: {result["message"]}")
     else:
-        print(f"Failed to get a response from the server. Status code: {response.status_code}")
+        print(
+            f"Failed to get a response from the server. Status code: {response.status_code}"
+        )
 
 
 # Entry point for CLI

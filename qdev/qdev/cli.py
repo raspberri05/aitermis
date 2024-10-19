@@ -4,7 +4,7 @@ import requests
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Simple CLI for basic math operations."
+        description="An AI-powered to help speed up development"
     )
     parser.add_argument("query", type=str, help="your query to the ai")
 
