@@ -1,10 +1,11 @@
 import argparse
 import requests
-
 import os
 
+from .url import make_url
+
 def main():
-    url = os.getenv("URL")
+    url = make_url()
     parser = argparse.ArgumentParser(
         description="An AI-powered to help speed up development"
     )

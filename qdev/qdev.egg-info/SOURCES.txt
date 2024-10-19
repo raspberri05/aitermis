@@ -2,6 +2,7 @@ README.md
 setup.py
 qdev/__init__.py
 qdev/cli.py
+qdev/url.py
 qdev.egg-info/PKG-INFO
 qdev.egg-info/SOURCES.txt
 qdev.egg-info/dependency_links.txt
