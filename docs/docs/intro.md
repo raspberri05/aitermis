@@ -27,6 +27,6 @@ a "create new next.js app"
 ### Output
 
 ```bash
-your query: creat new next.js app
+your query: create new next.js app
 command: npx create-next-app@latest myapp
 ```
