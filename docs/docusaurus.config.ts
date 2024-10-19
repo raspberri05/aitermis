@@ -3,12 +3,12 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'qdev',
-  tagline: 'speeding up development',
+  title: 'aitermis',
+  tagline: 'ai-powered terminal commands',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://qdev.nayasinghania.com',
+  url: 'https://aitermis.nayasinghania.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -16,7 +16,7 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'raspberri05', // Usually your GitHub org/user name.
-  projectName: 'qdev', // Usually your repo name.
+  projectName: 'aitermis', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -38,7 +38,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/raspberri05/qdev/blob/main/docs/docs/intro.md',
+            'https://github.com/raspberri05/aitermis/blob/main/docs/docs/intro.md',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -51,7 +51,7 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'qdev',
+      title: 'aitermis',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
@@ -82,7 +82,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub Discussions',
-              href: 'https://github.com/raspberri05/qdev',
+              href: 'https://github.com/raspberri05/aitermis',
             },
           ],
         },
@@ -91,7 +91,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/raspberri05/qdev',
+              href: 'https://github.com/raspberri05/aitermis',
             },
           ],
         },

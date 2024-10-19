@@ -15,7 +15,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        qdev was designed from the ground up to be easily installed and used to make development workflows more efficient
+        aitermis was designed from the ground up to be easily installed and used to make development workflows more efficient
       </>
     ),
   },
@@ -25,7 +25,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        qdev has simple configuration and can process natural language to perform the appropriate actions
+        aitermis has simple configuration and can process natural language to perform the appropriate actions
       </>
     ),
   },
@@ -35,7 +35,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        python is fast and makes qdev fast
+        python is fast and makes aitermis fast
       </>
     ),
   },
