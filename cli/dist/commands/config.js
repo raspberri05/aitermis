@@ -17,6 +17,7 @@ function config() {
             console.log(`adding github username ${username} to ${os_1.default.homedir()}/.qdev`);
             try {
                 fs_1.default.writeFileSync(fp, content);
+                (0, helpers_1.println)("done", "green");
             }
             catch (err) {
                 console.error(err);

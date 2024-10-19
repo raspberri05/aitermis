@@ -5,7 +5,7 @@ import { help, config, clone, undef } from "./commands";
 
 const cmd = command();
 
-function run(func: any) {
+function run(func: () => void) {
     func();
     handleExit(0);
 }

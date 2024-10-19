@@ -1,5 +1,5 @@
 {
-    "title": "welcome to quickdev (q), a cli tool to help speed up dev setup",
+    "title": "welcome to qdev (q), a cli tool to help speed up dev setup",
     "subtitle": "type 'q help' for help",
     "commands": [
         {
@@ -8,7 +8,7 @@
         },
         {
             "name": "config",
-            "description": "configure q",
+            "description": "configure qdev",
             "usage": "q config <option> <value>",
             "options": [
                 {

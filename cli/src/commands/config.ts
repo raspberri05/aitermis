@@ -1,5 +1,5 @@
 import fs from "fs";
-import { options } from "../helpers";
+import { options, println } from "../helpers";
 import os from "os";
 const opts = options();
 
@@ -14,6 +14,7 @@ export default function config() {
             );
             try {
                 fs.writeFileSync(fp, content);
+                println("done", "green");
             } catch (err) {
                 console.error(err);
             }

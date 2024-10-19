@@ -1,4 +1,5 @@
 import { print, println, option } from "../helpers";
+import { type Command, type CommandOption } from "../types";
 import fs from "fs";
 import path from "path";
 
@@ -9,15 +10,19 @@ const cmds = JSON.parse(fs.readFileSync(cmdsFilePath, "utf8"));
 
 export default function help() {
     if (opt === undefined) {
-        println("qdev v1.1.0", "yellow");
+        println("qdev v1.2.1", "yellow");
         println("");
-        cmds.commands.forEach((command: any) => {
+        println(
+            "type 'q help <command>' to get more information about a command",
+        );
+        println("");
+        cmds.commands.forEach((command: Command) => {
             print(command.name, "blue");
             print(" - ");
             println(command.description);
         });
     } else {
-        const command = cmds.commands.find((cmd: any) => cmd.name === opt);
+        const command = cmds.commands.find((cmd: Command) => cmd.name === opt);
         if (command) {
             if (command.options) {
                 println(command.description, "green");
@@ -26,11 +31,11 @@ export default function help() {
                 println(`${command.usage}`);
                 println("");
                 println("options: ", "yellow");
-                command.options.forEach((option: any) => {
+                command.options.forEach((option: CommandOption) => {
                     println(option.name, "blue");
-                    print("  description: ");
+                    print("  description: ", "cyan");
                     println(option.description);
-                    print("  example:     ");
+                    print("  example:     ", "cyan");
                     println(option.example);
                 });
             }
