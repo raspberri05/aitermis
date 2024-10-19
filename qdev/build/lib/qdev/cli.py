@@ -1,6 +1,5 @@
 import argparse
 import requests
-import os
 
 from .url import make_url
 
