@@ -1,0 +1,3 @@
+fastapi[standard]
+openai
+uvicorn[standard]

@@ -1,26 +1,27 @@
 import argparse
-
-# Your CLI logic
-def add(a, b):
-    return a + b
-
-def subtract(a, b):
-    return a - b
+import requests
 
 def main():
-    parser = argparse.ArgumentParser(description="Simple CLI for basic math operations.")
-    parser.add_argument("operation", choices=["add", "subtract"], help="Operation to perform.")
-    parser.add_argument("a", type=int, help="First number.")
-    parser.add_argument("b", type=int, help="Second number.")
-    
+    parser = argparse.ArgumentParser(
+        description="Simple CLI for basic math operations."
+    )
+    parser.add_argument("query", type=str, help="your query to the ai")
+
     args = parser.parse_args()
 
-    if args.operation == "add":
-        result = add(args.a, args.b)
-    elif args.operation == "subtract":
-        result = subtract(args.a, args.b)
+    result = args.query
 
-    print(f"The result is: {result}")
+    print(f"your query: {result}")
+
+    response = requests.get(f"http://127.0.0.1:8000/?query={result}")
+
+    # Check if the request was successful
+    if response.status_code == 200:
+        result = response.json()  # Assuming the server returns JSON
+        print(f"command: {result["message"]}")
+    else:
+        print(f"Failed to get a response from the server. Status code: {response.status_code}")
+
 
 # Entry point for CLI
 if __name__ == "__main__":
