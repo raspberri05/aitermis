@@ -1,7 +1,6 @@
 import { spawn } from "child_process";
 import readline from "readline";
-import { option } from "../helpers/optparse";
-import { exits } from "../helpers/exits";
+import { option, exits } from "../helpers";
 
 const rl = readline.createInterface({
     input: process.stdin,
@@ -28,7 +27,7 @@ function cloneProc(uri: string, callback: (code: number) => void) {
     });
 }
 
-export function clone(callback: (code: number) => void) {
+export default function clone(callback: (code: number) => void) {
     const opt = option();
     let uri: string = "";
     if (opt === undefined) {

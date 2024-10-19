@@ -1,8 +1,8 @@
-import { println } from "../helpers/console";
+import { println } from "../helpers";
 import fs from "fs";
 import path from "path";
 
-export function undef() {
+export default function undef() {
     const titleFilPath = path.join(__dirname, "../data.json");
     const title = JSON.parse(fs.readFileSync(titleFilPath, "utf8"));
     println(title.title, "green");

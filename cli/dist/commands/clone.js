@@ -3,11 +3,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.clone = clone;
+exports.default = clone;
 const child_process_1 = require("child_process");
 const readline_1 = __importDefault(require("readline"));
-const optparse_1 = require("../helpers/optparse");
-const exits_1 = require("../helpers/exits");
+const helpers_1 = require("../helpers");
 const rl = readline_1.default.createInterface({
     input: process.stdin,
     output: process.stdout,
@@ -29,7 +28,7 @@ function cloneProc(uri, callback) {
     });
 }
 function clone(callback) {
-    const opt = (0, optparse_1.option)();
+    const opt = (0, helpers_1.option)();
     let uri = "";
     if (opt === undefined) {
         rl.question("Repository username/organization\n", (user) => {
@@ -45,6 +44,6 @@ function clone(callback) {
         cloneProc(uri, callback);
     }
     else {
-        (0, exits_1.exits)("Invalid option provided.", 1);
+        (0, helpers_1.exits)("Invalid option provided.", 1);
     }
 }

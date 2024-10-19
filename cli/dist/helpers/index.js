@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.options = exports.option = exports.handleExit = exports.exits = exports.println = exports.print = exports.command = void 0;
+const cmdparse_1 = require("./cmdparse");
+Object.defineProperty(exports, "command", { enumerable: true, get: function () { return cmdparse_1.command; } });
+const console_1 = require("./console");
+Object.defineProperty(exports, "print", { enumerable: true, get: function () { return console_1.print; } });
+Object.defineProperty(exports, "println", { enumerable: true, get: function () { return console_1.println; } });
+const exits_1 = require("./exits");
+Object.defineProperty(exports, "exits", { enumerable: true, get: function () { return exits_1.exits; } });
+Object.defineProperty(exports, "handleExit", { enumerable: true, get: function () { return exits_1.handleExit; } });
+const optparse_1 = require("./optparse");
+Object.defineProperty(exports, "option", { enumerable: true, get: function () { return optparse_1.option; } });
+Object.defineProperty(exports, "options", { enumerable: true, get: function () { return optparse_1.options; } });
