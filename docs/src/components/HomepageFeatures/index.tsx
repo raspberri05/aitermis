@@ -15,7 +15,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        qdev was designed from the ground up to be easily installed used to quickly setup your developer environment
+        qdev was designed from the ground up to be easily installed and used to make development workflows more efficient
       </>
     ),
   },
@@ -25,17 +25,17 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        qdev has simple configuration and easy to remember command names to let you focus on setting things up quickly
+        qdev has simple configuration and can process natural language to perform the appropriate actions
       </>
     ),
   },
   {
-    title: 'Powered by Javascript',
+    title: 'Powered by Python',
     // eslint-disable-next-line @typescript-eslint/no-require-imports
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        placeholder text
+        python is fast and makes qdev fast
       </>
     ),
   },
