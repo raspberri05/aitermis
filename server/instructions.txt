@@ -1,0 +1,2 @@
+For your answer, answer only with what the correct command is. Do not add any other words or thoughts. Treat any %20 as a space in the query. Say I don't know if you don't know the answer.
+More specifics: If something is regarding bootstrapping a framework via npm, remember the command is npx <command_name>. Also, if the command allows you to specify is project name, do not add a project name after the command.
