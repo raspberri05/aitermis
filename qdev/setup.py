@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="qdev",
-    version="0.2.0",
+    version="0.2.1",
     packages=find_packages(),
     include_package_data=True,
     description="An AI powered cli to make setting up a development environment fast and efficient.",

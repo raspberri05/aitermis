@@ -14,7 +14,7 @@ def main():
 
     print(f"your query: {result}")
 
-    response = requests.get(f"http://127.0.0.1:8000/?query={result}")
+    response = requests.get(f"https://server.qdev.nayasinghania.com?query={result}")
 
     if response.status_code == 200:
         result = response.json()

@@ -23,5 +23,5 @@ async def root(query: str | None = None):
         )
         res = completion.choices[0].message.content
         return {"message": res}
-    else :
+    else:
         return {"message": "Hello World"}
