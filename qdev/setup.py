@@ -1,4 +1,25 @@
 from setuptools import setup, find_packages
+from setuptools.command.build_py import build_py as _build_py
+from distutils.cmd import Command
+
+class CustomBuildPy(_build_py):
+    def run(self):
+        target_file = "qdev/url.py"
+        try:
+            with open(target_file, "r") as f:
+                content = f.read()
+
+            content = content.replace("http://127.0.0.1:3000", "https://server.qdev.nayasinghania.com")
+
+            with open(target_file, "w") as f:
+                f.write(content)
+
+            print("URL replacement Done")
+        except FileNotFoundError:
+            print(f"{target_file} not found, skipping URL replacement.")
+
+        super().run()
+
 
 setup(
     name="qdev",
@@ -21,4 +42,7 @@ setup(
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
     ],
+    cmdclass={
+        "build_py": CustomBuildPy,
+    },
 )
