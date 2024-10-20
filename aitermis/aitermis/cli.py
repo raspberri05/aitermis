@@ -1,33 +1,41 @@
 import argparse
 import requests
+import os
 
 from .url import make_url
+
+import sys
+
+
+class MyParser(argparse.ArgumentParser):
+    def error(self, message):
+        print("welcome to aitermis (a)!")
+        print("run 'a --help' for help")
+        sys.exit(2)
 
 
 def main():
     url = make_url()
-    parser = argparse.ArgumentParser(
-        description="An AI-powered to help speed up development"
-    )
+    parser = MyParser()
     parser.add_argument("query", type=str, help="your query to the ai")
+    parser.set_defaults(func=lambda args: print("No arguments provided."))
 
     args = parser.parse_args()
 
     result = args.query
 
-    print(f"your query: {result}")
-
     response = requests.get(f"{url}/?query={result}")
 
     if response.status_code == 200:
-        result = response.json()
-        print(f"command: {result["message"]}")
+        result = response.json()["message"]
+        exec = str(input(f"do you want to execute command '{result}'? (y/n): "))
+        if exec.lower() == "y":
+            os.system(result)
     else:
         print(
             f"Failed to get a response from the server. Status code: {response.status_code}"
         )
 
 
-# Entry point for CLI
 if __name__ == "__main__":
     main()
