@@ -28,8 +28,8 @@ def main():
 
     if response.status_code == 200:
         result = response.json()["message"]
-        exec = str(input(f"do you want to execute command '{result}'? (y/n): "))
-        if exec.lower() == "y":
+        execute = str(input(f"do you want to execute command '{result}'? (y/n): "))
+        if execute.lower() == "y":
             os.system(result)
     else:
         print(
