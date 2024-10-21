@@ -16,16 +16,22 @@ def main():
 
     result = args.query
 
-    response = requests.get(f"{url}/?query={result}")
+    try:
+        response = requests.get(f"{url}/?query={result}")
+        response.raise_for_status()
+    except requests.RequestException as e:
+        print(f"Failed to get response from server: {e}")
+        return
+    
 
-    if response.status_code == 200:
-        result = response.json()["message"]
-        execute = str(input(f"do you want to execute command '{result}'? (y/n): "))
+    result = response.json().get("message", None)
+    if result:
+        execute = input(f"do you want to execute the command '{result}'? (y/n): ").strip().lower()
         if execute.lower() == "y":
-            os.system(result)
+            subprocess.run(result, shell=False)
     else:
         print(
-            f"Failed to get a response from the server. Status code: {response.status_code}"
+            f"Invalid response from server. \n Error: \n{response.json()}"
         )
 
 
