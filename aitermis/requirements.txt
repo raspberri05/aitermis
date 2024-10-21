@@ -1,1 +1,3 @@
 black
+watchdog
+requests
