@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="aitermis",
-    version="1.2.0",
+    version="1.2.1",
     packages=find_packages(),
     include_package_data=True,
     description="an ai powered terminal assistant to help you find the command you need!",
