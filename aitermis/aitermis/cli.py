@@ -1,5 +1,5 @@
 import requests
-import os
+import subprocess
 
 from .url import make_url
 from .parser import AitermisParser
