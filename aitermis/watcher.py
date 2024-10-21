@@ -12,6 +12,7 @@ class MyHandler(FileSystemEventHandler):
 
 
 if __name__ == "__main__":
+    os.system("pip install . > /dev/null 2>&1")
     event_handler = MyHandler()
     observer = Observer()
     observer.schedule(event_handler, path="./aitermis", recursive=True)

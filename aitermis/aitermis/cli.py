@@ -1,24 +1,16 @@
-import argparse
 import requests
 import os
 
 from .url import make_url
-
-import sys
-
-
-class MyParser(argparse.ArgumentParser):
-    def error(self, message):
-        print("welcome to aitermis (a)!")
-        print("run 'a --help' for help")
-        sys.exit(2)
+from .parser import AitermisParser
 
 
 def main():
     url = make_url()
-    parser = MyParser()
-    parser.add_argument("query", type=str, help="your query to the ai")
-    parser.set_defaults(func=lambda args: print("No arguments provided."))
+    parser = AitermisParser()
+    parser.add_argument(
+        "query", type=str, help="your query to the ai (enclose in quotes)"
+    )
 
     args = parser.parse_args()
 
