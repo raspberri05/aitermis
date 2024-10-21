@@ -6,13 +6,21 @@ import os
 
 class MyHandler(FileSystemEventHandler):
     def on_modified(self, event):
-        if not event.is_directory:
+        if not event.is_directory and event.src_path.endswith(".py"):
             print(f"File modified: {event.src_path}")
-            os.system("pip install . > /dev/null 2>&1")
+            install_aitermis()
+            
+
+def install_aitermis():
+    try:
+        subprocess.check_call(["pip", "install", "."], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        print("AITermis installation successfully.")
+    except subprocess.CalledProcessError as e:
+        print(f"Failed to AITermis: {e}")
 
 
 if __name__ == "__main__":
-    os.system("pip install . > /dev/null 2>&1")
+    install_aitermis()
     event_handler = MyHandler()
     observer = Observer()
     observer.schedule(event_handler, path="./aitermis", recursive=True)
