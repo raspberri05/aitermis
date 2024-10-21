@@ -2,10 +2,10 @@ from setuptools import setup, find_packages
 
 setup(
     name="aitermis",
-    version="1.0.1",
+    version="1.2.0",
     packages=find_packages(),
     include_package_data=True,
-    description="An AI powered cli to make setting up a development environment fast and efficient.",
+    description="an ai powered terminal assistant to help you find the command you need!",
     author="Naya Singhania",
     author_email="naya.singhania@gmail.com",
     url="https://github.com/raspberri05/aitermis",

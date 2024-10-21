@@ -1,3 +1,4 @@
 black
 watchdog
 requests
+twine
