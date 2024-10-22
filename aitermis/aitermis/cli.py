@@ -3,6 +3,7 @@ import subprocess
 from .url import make_url
 from .parser import AitermisParser
 
+
 def main():
     url = make_url()
     parser = AitermisParser()
@@ -20,18 +21,19 @@ def main():
     except requests.RequestException as e:
         print(f"Failed to get response from server: {e}")
         return
-    
+
     result = response.json().get("message", None)
     if result:
-        execute = input(
-            f"do you want to execute the command '{result}'? (y/n): "
-        ).strip().lower()
+        execute = (
+            input(f"do you want to execute the command '{result}'? (y/n): ")
+            .strip()
+            .lower()
+        )
         if execute.lower() == "y":
             subprocess.run(result, shell=False)
     else:
-        print(
-            f"Invalid response from server. \n Error: \n{response.json()}"
-        )
+        print(f"Invalid response from server. \n Error: \n{response.json()}")
+
 
 if __name__ == "__main__":
     main()
