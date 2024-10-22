@@ -1,6 +1,3 @@
-[![DeepSource](https://app.deepsource.com/gh/raspberri05/aitermis:aitermis.svg/?label=active+issues&show_trend=true&token=kS_Yr_w77eJlN0Jnh6ZOXZtG)](https://app.deepsource.com/gh/raspberri05/aitermis:aitermis/)
-[![DeepSource](https://app.deepsource.com/gh/raspberri05/aitermis:server.svg/?label=active+issues&show_trend=true&token=JhH_Ri5bxx-cZJIC_n4NQgj7)](https://app.deepsource.com/gh/raspberri05/aitermis:server/)
-
 # aitermis
 
 an ai powered cli tool to help speed up dev setup
