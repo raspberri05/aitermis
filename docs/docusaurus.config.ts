@@ -4,7 +4,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "aitermis",
-  tagline: "ai-powered terminal commands",
+  tagline: "Your AI-Powered Terminal Assistant",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -38,7 +38,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/raspberri05/aitermis/blob/main/docs/docs/intro.md",
+            "https://github.com/raspberri05/aitermis/blob/main/docs",
         },
         theme: {
           customCss: "./src/css/custom.css",

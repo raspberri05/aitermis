@@ -21,7 +21,7 @@ pip install aitermis -U
 ### Input
 
 ```bash
-a "create new next.js app"
+a 'create new next.js app'
 ```
 
 ### Output

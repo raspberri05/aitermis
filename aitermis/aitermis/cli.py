@@ -46,7 +46,7 @@ class AitermisCLI:
 
     def handle_unknown_response(self, result):
         """Handle the case where the AI response is 'I don't know.'"""
-        if result == "I don't know." or "I don't know":
+        if result == "I don't know." or result == "I don't know":
             print(
                 "Unable to process query. Please try again.\n"
                 "Here are some examples of valid queries:\n"
