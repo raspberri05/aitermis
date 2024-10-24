@@ -15,6 +15,9 @@ pip install aitermis
 ```bash
 pip install aitermis -U
 ```
+## Binaries
+
+You can find downloadable binaries for aitermis on our [PyPi project page](https://pypi.org/project/aitermis/)
 
 ## Basic usage example
 
@@ -27,6 +30,7 @@ a 'create new next.js app'
 ### Output
 
 ```bash
-your query: create new nextjs app
-command: npx create-next-app@latest
+Do you want to execute the command 'npx create-next-app'? (y/n): y
 ```
+
+In this example, when you ask aitermis to find the command to create a new Next.js app, it finds the command, then asks if you want to execute it. If yes, it will execute the command, opening the Next.js project creation cli.
