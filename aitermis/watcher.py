@@ -18,7 +18,7 @@ def install_aitermis():
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
         )
-        print("AITermis installation successfully.")
+        print("aitermis (local) installed successfully")
     except subprocess.CalledProcessError as e:
         print(f"Failed to AITermis: {e}")
 

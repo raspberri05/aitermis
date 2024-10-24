@@ -9,9 +9,11 @@ class AitermisParser(argparse.ArgumentParser):
         print("/ _` || ||  _|/ -_)| '_|| '  \ | |(_-<")
         print("\__,_||_| \__|\___||_|  |_|_|_||_|/__/")
         print()
-        print("welcome to aitermis (a)!")
-        print("an ai powered terminal assistant to help you find the command you need!")
+        print("Welcome to aitermis (a)!")
+        print(
+            "aitermis is an ai powered terminal assistant to help you find the command you need!"
+        )
         print()
-        print("run 'a --help' for help")
+        print("Type 'a --help' for help")
         print()
         sys.exit(2)

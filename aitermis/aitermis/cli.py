@@ -14,7 +14,7 @@ class AitermisCLI:
     def get_user_query(self):
         """Parse and return the user query from command line arguments."""
         self.parser.add_argument(
-            "query", type=str, help="your query to the AI (enclose in quotes)"
+            "query", type=str, help="Your query to the AI (enclose in quotes)"
         )
         args = self.parser.parse_args()
         return args.query
@@ -40,7 +40,7 @@ class AitermisCLI:
             try:
                 self.runner(command, shell=True, check=True)
             except subprocess.CalledProcessError as e:
-                print(f"Error executing the command: {e}")
+                print(f"Error executing {e}")
         else:
             print("Command execution aborted.")
 
@@ -51,8 +51,7 @@ class AitermisCLI:
                 "Unable to process query. Please try again.\n"
                 "Here are some examples of valid queries:\n"
                 "❯ a 'create me a React TypeScript project'\n"
-                "❯ a 'set up a Python Flask app'\n"
-                "❯ a 'generate a Dockerfile for a Node.js app'"
+                "❯ a 'create a new next js app project'\n"
             )
             return False
         return True
@@ -66,7 +65,7 @@ class AitermisCLI:
                 return
             self.confirm_and_execute(result)
         else:
-            print("Invalid response from server. Please try again.")
+            print("Invalid server response. Please try again.")
 
 
 def main():
